@@ -3,7 +3,7 @@
 ### Overview
 This repository contains my solution for the course project from Coursera's and Johns Hopkins University's course titled Getting and Cleaning Data.  
 
-The purpose of the project is to test our ability to collect, work with, and clean a data set.  We are to demonstrate that we can prepare tidy data that can bse used for later analysis.  The data set is from from the [University of California, Irvine's Machine Learning Repository]{http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#}.  The actual data used for this project can be [downloaded from here]{https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip}.
+The purpose of the project is to test our ability to collect, work with, and clean a data set.  We are to demonstrate that we can prepare tidy data that can bse used for later analysis.  The data set is from from the [University of California, Irvine's Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#).  The actual data used for this project can be [downloaded from here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
 
 You should find the following files in this repository:
 
