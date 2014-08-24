@@ -18,7 +18,9 @@ To create the tidy data set required for the course project, several steps were 
 4. Appropriately labels the data set with descriptive variable names. 
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
-As a result, the tidy dataset generated from run_analysis.R has several distinctions from the original dataset.  Our dataset includes the activity label and subject.  We have also excluded all of the features that were not related to the mean or standard deviation of the vector magnitudes.  We also cleared up some of the errors in the feature descriptions from the original data set.  Finally, we have altered the observations to the mean for each subject, activity and variable combination.  This means that the tidy data set contains 21 total features.
+As a result of these operations, the tidy dataset generated from run_analysis.R has several distinctions from the original dataset.  Our tidy dataset includes the descriptive activity label and subject identifier.  We also chose to exclude features from the original data set.  We have chosen to use only vector magnitude values instead of the values from each individual axis.  We have also excluded all of the features that were not related to the mean or standard deviation.  We cleared up some of the errors in the feature descriptions from the original data set.  Finally, we have altered the observations to the mean for each subject, activity and variable combination.
+
+The original data set contained a total of 10299 samples with 563 features for each sample.  We have reduced the total number of features down to 21 and we describe each of them below.  We also have 180 samples in our tidy data set.  This is due to grouping by the activity type and subject id for all of the original samples and calculating the aggregated mean of them.  Since there were 6 original activities and 30 subjects, the new sample size makes sense.
 
 ### Sources From the Original Data Set
 The following files were used to merge the training and test sets:
@@ -35,24 +37,24 @@ The following files were used to merge the training and test sets:
 ### Tidy Dataset Features
 | Feature | Description |
 | ------- | ----------- |
-| activityId | |
-| subjectId | |
-| timeBodyAccMagnitudeMean | |
-| timeBodyAccMagnitudeStdDev | |
-| timeGravityAccMagnitudeMean | |
-| timeGravityAccMagnitudeStdDev | |
-| timeBodyAccJerkMagnitudeMean | |
-| timeBodyAccJerkMagnitudeStdDev | |
-| timeBodyGyroMagnitudeMean | |
-| timeBodyGyroMagnitudeStdDev | |
-| timeBodyGyroJerkMagnitudeMean | |
-| timeBodyGyroJerkMagnitudeStdDev | |
-| freqBodyAccMagnitudeMean | |
-| freqBodyAccMagnitudeStdDev | |
-| freqBodyAccJerkMagnitudeMean | |
-| freqBodyAccJerkMagnitudeStdDev | |
-| freqBodyGyroMagnitudeMean | |
-| freqBodyGyroMagnitudeStdDev | |
-| freqBodyGyroJerkMagnitudeMean | |
-| freqBodyGyroJerkMagnitudeStdDev | |
-| activityLabel | |
+| activityId | Values between 1 and 6, with the actual descriptive activity name listed in the activityLabel feature |
+| subjectId | This feature identifies the subject who performed the activity for each sample.  The range is from 1 to 30 |
+| activityLabel | This contains the descriptive name for the activity performed.  This can be any one of the following values: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING|
+| timeBodyAccMagnitudeMean | The mean of the time domain signals for the magnitude of the three-dimensional body acceleration signals from the accelerometer calculated using the Euclidean norm. |
+| timeBodyAccMagnitudeStdDev | The standard deviation of the time domain signals for the magnitude of the three-dimensional body acceleration signals from the accelerometer calculated using the Euclidean norm. |
+| timeGravityAccMagnitudeMean | The mean of the time domain signals for the magnitude of the three-dimensional gravity acceleration signals from the accelerometer calculated using the Euclidean norm. |
+| timeGravityAccMagnitudeStdDev | The standard deviation of the time domain signals for the magnitude of the three-dimensional gravity acceleration signals from the accelerometer calculated using the Euclidean norm.|
+| timeBodyAccJerkMagnitudeMean | The mean of the time domain signals for the magnitude of the three-dimensional Jerk signals from the accelerometer calculated using the Euclidean norm.|
+| timeBodyAccJerkMagnitudeStdDev | The standard deviation of the time domain signals for the magnitude of the three-dimensional Jerk signals from the accelerometer calculated using the Euclidean norm.|
+| timeBodyGyroMagnitudeMean | The mean of the time domain signals for the magnitude of the three-dimensional body acceleration signals from the gyroscope calculated using the Euclidean norm.|
+| timeBodyGyroMagnitudeStdDev | The standard deviation of the time domain signals for the magnitude of the three-dimensional body acceleration signals from the gyroscope calculated using the Euclidean norm. |
+| timeBodyGyroJerkMagnitudeMean | The mean of the time domain signals for the magnitude of the three-dimensional jerk signals from the gyroscope calculated using the Euclidean norm.|
+| timeBodyGyroJerkMagnitudeStdDev | The standard deviation of the time domain signals for the magnitude of the three-dimensional jerk signals from the gyroscope calculated using the Euclidean norm.|
+| freqBodyAccMagnitudeMean | The mean of the frequency domain signals for the magnitude of the three-dimensional body acceleration signals from the accelerometer calculated using a Fast Fourier Transform and the Euclidean norm. |
+| freqBodyAccMagnitudeStdDev | The standard deviation of the frequency domain signals for the magnitude of the three-dimensional body acceleration signals from the accelerometer calculated using a Fast Fourier Transform and the Euclidean norm.|
+| freqBodyAccJerkMagnitudeMean | The mean of the frequency domain signals for the magnitude of the three-dimensional jerk signals from the accelerometer calculated using a Fast Fourier Transform and the Euclidean norm.|
+| freqBodyAccJerkMagnitudeStdDev | The standard deviation of the frequency domain signals for the magnitude of the three-dimensional jerk signals from the accelerometer calculated using a Fast Fourier Transform and the Euclidean norm.|
+| freqBodyGyroMagnitudeMean | The mean of the frequency domain signals for the magnitude of the three-dimensional body acceleration signals from the gyroscope calculated using a Fast Fourier Transform and the Euclidean norm.|
+| freqBodyGyroMagnitudeStdDev | The standard deviation of the frequency domain signals for the magnitude of the three-dimensional body acceleration signals from the gyroscope calculated using a Fast Fourier Transform and the Euclidean norm. |
+| freqBodyGyroJerkMagnitudeMean | The mean of the frequency domain signals for the magnitude of the three-dimensional jerk signals from the gyroscope calculated using a Fast Fourier Transform and the Euclidean norm.|
+| freqBodyGyroJerkMagnitudeStdDev | The standard deviation of the frequency domain signals for the magnitude of the three-dimensional jerk signals from the gyroscope calculated using a Fast Fourier Transform and the Euclidean norm.|
