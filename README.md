@@ -7,9 +7,9 @@ The purpose of the project is to test our ability to collect, work with, and cle
 
 You should find the following files in this repository:
 
-* (README.md) - The current file you are viewing
-* (CodeBook.md) - This is the code book for the data set generated for this project
-* (run_analysis.R) - This is the script that generates the tidy data set for this project
+* README.md - The current file you are viewing
+* CodeBook.md - This is the code book for the data set generated for this project
+* run_analysis.R - This is the script that generates the tidy data set for this project
 
 ### run_analysis.R Summary
 The run_analysis.R script will complete all of the necessary steps to generate the tidy data set required for this project:
